@@ -1,7 +1,7 @@
 # How to setup this project
 This step-by-step guide will help you set up this project for v-slice mod creation. Keep in mind, that there might be some bugs and you should use your head while following it.
 
-In case you stumble upon any problem, check [common issues](./docs/ttw/issues.md) for potential solutions.
+In case you stumble upon any problem, check [common issues](./issues.md) for potential solutions.
 
 0. Setup
     - Install Haxe from [Haxe.org](https://haxe.org)
