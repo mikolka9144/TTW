@@ -119,14 +119,15 @@ class Module implements IPlayStateScriptedClass implements IStateChangingScripte
 
   public function onSongRetry(event:ScriptEvent) {}
 
-    /**
+  /**
    * Polymod function: Calls a requested function from this scripted class using given arguments
    *
    * You must enable `mockPolymodCalls` to use this function
    * @param funcName Name of the target function
    * @param args Arguments for that function
    */
-  public function polymodExecFunc(funcName:String, args:Array<Dynamic>):Dynamic {
+  public function polymodExecFunc(funcName:String, args:Array<Dynamic> = null):Dynamic
+  {
     //* mock call. Once build it should be replaced with
     //* 'scriptCall'
     return null;

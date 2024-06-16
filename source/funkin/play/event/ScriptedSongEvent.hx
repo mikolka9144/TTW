@@ -32,7 +32,7 @@ class ScriptedSongEvent extends SongEvent {
    * @param funcName Name of the target function
    * @param args Arguments for that function
    */
-  public function polymodExecFunc(funcName:String, args:Array<Dynamic>):Dynamic {
+  public function polymodExecFunc(funcName:String, args:Array<Dynamic> = null):Dynamic {
     //* mock call. Once build it should be replaced with
     //* 'scriptCall'
     return null;

@@ -9,7 +9,7 @@ In case you stumble upon any problem, check [common issues](./docs/ttw/issues.md
     - Install [Git](https://git-scm.com/)
     - Install lime by typing `haxelib --global install lime` in any terminal program
 1. Download the project
-    - run ` git clone <repo-name> --depth 1` to download this template.
+    - run ` git clone https://github.com/mikolka9144/TTW.git --depth 1` to download this template.
 
         if you decide to just download files instead, make sure you have repo created with at least one commit
 
