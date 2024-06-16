@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Download assets",
+      "command": "haxe --run AssetRipper.hx -m AssetRipper ; exit",
+      "cwd": "${workspaceFolder}/source/ttw"
+    },
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Compile mod",
+      "command": "haxe --run Test.hx ; exit",
+      "cwd": "${workspaceFolder}/source/ttw"
+    },
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Compile&Launch mod",
+      "command": "haxe --run Test.hx run ; exit",
+      "cwd": "${workspaceFolder}/source/ttw"
+    },
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Launch mod",
+      "command": "haxe --run Test.hx just-run ; exit",
+      "cwd": "${workspaceFolder}/source/ttw"
+    }
+  ]
+}
