@@ -9,6 +9,7 @@ There are 2 main documentations
 - New docs related to this project
   - [Guide on initial configuration](./ttw/Compile%20guide.md)
   - [documentation of folder structure](ttw/Code%20structure.md)
+  - [Guide on starting fresh](./ttw/Starting%20fresh.md)
   - [List of compiler's features](./ttw/features.md)
   - [V-slice mod classes info](./ttw/V-Slice%20modules.md)
   - [TTW issues fixes](./ttw/issues.md)
