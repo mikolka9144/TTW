@@ -26,5 +26,10 @@
 
   "whitespace": {
     "switchPolicy": "around"
+  },
+  "wrapping": {
+    "opAddSubChain": {
+      "defaultWrap": "keep"
+    }
   }
 }
