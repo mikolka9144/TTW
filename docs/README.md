@@ -1,7 +1,7 @@
 # Docs
 
 There are 2 main documentations
-
+- [V-slice unofficial documentation](v-slice/V-Slice%20modules.md)
 - Original FNF docs in
   - [FNFC format (used by charter)](./base_game/FNFC-SPEC.md)
   - [Base game code style guide](./base_game/CODESTYLE.md)

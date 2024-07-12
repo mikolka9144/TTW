@@ -60,7 +60,7 @@ class OptionsState extends MusicBeatState
     super.create();
   }
 
-  function addPage<T:Page>(name:PageName, page:T)
+  public function addPage<T:Page>(name:PageName, page:T)
   {
     page.onSwitch.add(switchPage);
     pages[name] = page;
@@ -69,7 +69,7 @@ class OptionsState extends MusicBeatState
     return page;
   }
 
-  function setPage(name:PageName)
+  public function setPage(name:PageName)
   {
     if (pages.exists(currentName))
     {
@@ -86,7 +86,7 @@ class OptionsState extends MusicBeatState
     }
   }
 
-  function switchPage(name:PageName)
+  public function switchPage(name:PageName)
   {
     // TODO: Animate this transition?
     setPage(name);
@@ -101,7 +101,7 @@ class OptionsState extends MusicBeatState
     switchPage(Options);
   }
 
-  function exitToMainMenu()
+  public function exitToMainMenu()
   {
     currentPage.enabled = false;
     // TODO: Animate this transition?
@@ -141,7 +141,7 @@ class Page extends FlxGroup
     if (enabled) updateEnabled(elapsed);
   }
 
-  function updateEnabled(elapsed:Float)
+  public function updateEnabled(elapsed:Float)
   {
     if (canExit && controls.BACK)
     {
@@ -150,12 +150,12 @@ class Page extends FlxGroup
     }
   }
 
-  function set_enabled(value:Bool)
+  public function set_enabled(value:Bool)
   {
     return this.enabled = value;
   }
 
-  function openPrompt(prompt:Prompt, onClose:Void->Void)
+  public function openPrompt(prompt:Prompt, onClose:Void->Void)
   {
     enabled = false;
     prompt.closeCallback = function() {
@@ -196,7 +196,7 @@ class OptionsMenu extends Page
     createItem("EXIT", exit);
   }
 
-  function createItem(name:String, callback:Void->Void, fireInstantly = false)
+  public function createItem(name:String, callback:Void->Void, fireInstantly = false)
   {
     var item = items.createItem(0, 100 + items.length * 100, name, BOLD, callback);
     item.fireInstantly = fireInstantly;
@@ -220,12 +220,12 @@ class OptionsMenu extends Page
   }
 
   #if newgrounds
-  function selectLogin()
+  public function selectLogin()
   {
     openNgPrompt(NgPrompt.showLogin());
   }
 
-  function selectLogout()
+  public function selectLogout()
   {
     openNgPrompt(NgPrompt.showLogout());
   }
@@ -249,7 +249,7 @@ class OptionsMenu extends Page
     openPrompt(prompt, onPromptClose);
   }
 
-  function checkLoginStatus()
+  public function checkLoginStatus()
   {
     // this shit don't work!! wtf!!!!
     var prevLoggedIn = items.has("logout");

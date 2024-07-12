@@ -19,10 +19,10 @@ class ScriptedSongEvent extends SongEvent {
   /**
    * Initializes a scripted class instance using the given scripted class name and constructor arguments.
    * @param className Name of the target class extending ScriptedSongEvent type
-   * @param val2 constructor arguments?
+   * @param args List of argument of a scripted constructor. olny the first one seems to work?
    * @return ScriptedSongEvent
    */
-  public static function init(className:String,val2:String = ''):ScriptedSongEvent {
+  public static function init(className:String,...args:Any):ScriptedSongEvent {
     return null;
   }
   /**

@@ -92,7 +92,7 @@ class PlayerSettings
   /**
    * @param id The player number this represents. This was refactored to START AT `1`.
    */
-  function new(id:Int)
+  public function new(id:Int)
   {
     trace('loading player settings for id: $id');
 

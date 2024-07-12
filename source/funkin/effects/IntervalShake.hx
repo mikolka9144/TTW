@@ -236,5 +236,5 @@ class IntervalShake implements IFlxDestroyable
    * Internal constructor. Use static methods.
    */
   @:keep
-  function new() {}
+  public function new() {}
 }

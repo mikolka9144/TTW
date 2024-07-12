@@ -11,10 +11,10 @@ class ScriptedFlxSprite extends flixel.FlxSprite {
   /**
    * Initializes a scripted class instance using the given scripted class name and constructor arguments.
    * @param className Name of the target class extending ScriptedFlxSprite type
-   * @param val2 constructor arguments?
+   * @param args List of argument of a scripted constructor. olny the first one seems to work?
    * @return ScriptedFlxSprite
    */
-  public static function init(className:String,val2:String = ''):ScriptedFlxSprite {
+  public static function init(className:String,...args:Any):ScriptedFlxSprite {
     return null;
   }
   /**

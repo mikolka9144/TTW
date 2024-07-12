@@ -1043,7 +1043,7 @@ class FreeplayState extends MusicBeatSubState
     });
   }
 
-  function rankAnimSlam(fromResultsParams:Null<FromResultsParams>)
+  public function rankAnimSlam(fromResultsParams:Null<FromResultsParams>)
   {
     // FlxTween.tween(rankCamera, {"zoom": 1.9}, 0.5, {ease: FlxEase.backOut});
     FlxTween.tween(rankBg, {alpha: 0}, 0.5, {ease: FlxEase.expoIn});

@@ -51,7 +51,7 @@ class MusicBeatState extends FlxTransitionableState implements IEventHandler
     initCallbacks();
   }
 
-  function initCallbacks()
+  public function initCallbacks()
   {
     subStateOpened.add(onOpenSubStateComplete);
     subStateClosed.add(onCloseSubStateComplete);
@@ -90,7 +90,7 @@ class MusicBeatState extends FlxTransitionableState implements IEventHandler
     dispatchEvent(new UpdateScriptEvent(elapsed));
   }
 
-  function createWatermarkText()
+  public function createWatermarkText()
   {
     // Both have an xPos of 0, but a width equal to the full screen.
     // The rightWatermarkText is right aligned, which puts the text in the correct spot.
@@ -114,7 +114,7 @@ class MusicBeatState extends FlxTransitionableState implements IEventHandler
     ModuleHandler.callEvent(event);
   }
 
-  function debug_refreshModules()
+  public function debug_refreshModules()
   {
     PolymodHandler.forceReloadAssets();
 

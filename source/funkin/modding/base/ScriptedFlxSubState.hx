@@ -11,10 +11,10 @@ class ScriptedFlxSubState extends flixel.FlxSubState {
   /**
    * Initializes a scripted class instance using the given scripted class name and constructor arguments.
    * @param className Name of the target class extending ScriptedFlxSubState type
-   * @param val2 constructor arguments?
+   * @param args List of argument of a scripted constructor. olny the first one seems to work?
    * @return ScriptedFlxSubState
    */
-  public static function init(className:String,val2:String = ''):ScriptedFlxSubState {
+  public static function init(className:String,...args:Any):ScriptedFlxSubState {
     return null;
   }
   /**

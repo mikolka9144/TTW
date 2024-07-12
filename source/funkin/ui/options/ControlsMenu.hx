@@ -174,7 +174,7 @@ class ControlsMenu extends funkin.ui.options.OptionsState.Page
     add(prompt);
   }
 
-  function createItem(x = 0.0, y = 0.0, control:Control, index:Int)
+  public function createItem(x = 0.0, y = 0.0, control:Control, index:Int)
   {
     var item = new InputItem(x, y, currentDevice, control, index, onSelect);
     for (i in 0...controlGroups.length)
@@ -204,7 +204,7 @@ class ControlsMenu extends funkin.ui.options.OptionsState.Page
     prompt.exists = true;
   }
 
-  function goToDeviceList()
+  public function goToDeviceList()
   {
     controlGrid.selectedItem.idle();
     labels.members[Std.int(controlGrid.selectedIndex / COLUMNS)].alpha = 0.6;
@@ -215,7 +215,7 @@ class ControlsMenu extends funkin.ui.options.OptionsState.Page
     deviceListSelected = true;
   }
 
-  function selectDevice(device:Device)
+  public function selectDevice(device:Device)
   {
     currentDevice = device;
 
@@ -403,7 +403,7 @@ class ControlsMenu extends funkin.ui.options.OptionsState.Page
     PlayerSettings.player1.saveControls();
   }
 
-  function closePrompt()
+  public function closePrompt()
   {
     prompt.exists = false;
     controlGrid.enabled = true;
@@ -464,7 +464,7 @@ class InputItem extends TextMenuItem
     }
   }
 
-  function getInput()
+  public function getInput()
   {
     var list = PlayerSettings.player1.controls.getInputsFor(control, device);
     if (list.length > index)

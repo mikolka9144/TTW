@@ -1,5 +1,7 @@
 package mod.misc;
 
+import funkin.play.character.ScriptedCharacter.ScriptedBaseCharacter;
+import funkin.modding.base.ScriptedFlxAtlasSprite;
 import funkin.graphics.FunkinSprite;
 import funkin.Paths;
 import funkin.audio.FunkinSound;
@@ -12,11 +14,11 @@ import funkin.modding.base.ScriptedMusicBeatSubState;
  *
  * There're more types supporting scripting
  */
-class ExampleSubState extends ScriptedMusicBeatSubState
+class ExampleSubState extends ScriptedMusicBeatSubState // MusicBeatSubState
 {
-  public function new()
+  public function new(message:String, val:String)
   {
-    trace("creating sub-state");
+    trace("creating sub-state " + message + " " + val);
     super();
   }
 

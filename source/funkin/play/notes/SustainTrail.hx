@@ -136,7 +136,7 @@ class SustainTrail extends FlxSprite
     this.active = true; // This NEEDS to be true for the note to be drawn!
   }
 
-  function getBaseScrollSpeed()
+  public function getBaseScrollSpeed()
   {
     return (PlayState.instance?.currentChart?.scrollSpeed ?? 1.0);
   }
@@ -173,7 +173,7 @@ class SustainTrail extends FlxSprite
     return this.sustainLength;
   }
 
-  function triggerRedraw()
+  public function triggerRedraw()
   {
     graphicHeight = sustainHeight(sustainLength, parentStrumline?.scrollSpeed ?? 1.0);
     updateClipping();

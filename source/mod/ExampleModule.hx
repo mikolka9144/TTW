@@ -1,5 +1,8 @@
 package mod;
 
+import funkin.play.event.ScriptedSongEvent;
+import funkin.play.cutscene.dialogue.ScriptedConversation;
+import funkin.play.character.ScriptedCharacter.ScriptedAnimateAtlasCharacter;
 import flixel.FlxG;
 import funkin.modding.base.ScriptedMusicBeatSubState;
 import funkin.modding.events.ScriptEvent.UpdateScriptEvent;
@@ -13,7 +16,7 @@ import funkin.modding.module.Module;
 /**
  * This is example module showing how to manipulate game's states
  */
-class ExampleModule extends Module
+class ExampleModule extends Module // ScriptedModule
 {
   public function new()
   {
@@ -28,8 +31,7 @@ class ExampleModule extends Module
       //* We know a state's type here
       var setState = cast(ev.targetState, OptionsState);
       //* so we can cast to it here
-
-      var prefs = cast(setState.pages.get(PageName.Preferences), PreferencesMenu);
+      var prefs = cast(setState.pages.get("preferences"), PreferencesMenu);
       // Inject options to the options menu
       prefs.createPrefItemCheckbox("test option", "", (v) -> {
         // Obtaining "remote" module in ./misc/RemoteModule.hx
@@ -41,6 +43,7 @@ class ExampleModule extends Module
 
         //* but with `mockPolymodCalls` enabled you can do this
         funnyModule.polymodExecFunc("remoteCall", ["new and improved"]);
+        funnyModule.polymodExecFunc("remoteMulCall", ["new and improved", 999]);
       }, false);
     }
     super.onStateChangeEnd(ev);

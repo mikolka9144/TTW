@@ -65,7 +65,7 @@ class Prompt extends flixel.FlxSubState
     }
   }
 
-  function createButtons()
+  public function createButtons()
   {
     // destroy previous buttons
     while (buttons.members.length > 0)
@@ -86,7 +86,7 @@ class Prompt extends flixel.FlxSubState
     };
   }
 
-  function createButtonsHelper(yes:String, ?no:String)
+  public function createButtonsHelper(yes:String, ?no:String)
   {
     buttons.exists = true;
     // pass anonymous functions rather than the current callbacks, in case they change later
