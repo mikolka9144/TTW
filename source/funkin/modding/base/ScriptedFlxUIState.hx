@@ -11,10 +11,10 @@ class ScriptedFlxUIState extends flixel.addons.ui.FlxUIState {
   /**
    * Initializes a scripted class instance using the given scripted class name and constructor arguments.
    * @param className Name of the target class extending ScriptedFlxUIState type
-   * @param val2 constructor arguments?
+   * @param args List of argument of a scripted constructor. olny the first one seems to work?
    * @return ScriptedFlxUIState
    */
-  public static function init(className:String,val2:String = ''):ScriptedFlxUIState {
+  public static function init(className:String,...args:Any):ScriptedFlxUIState {
     return null;
   }
   /**

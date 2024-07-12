@@ -11,10 +11,10 @@ class ScriptedFlxTransitionableState extends flixel.addons.transition.FlxTransit
   /**
    * Initializes a scripted class instance using the given scripted class name and constructor arguments.
    * @param className Name of the target class extending ScriptedFlxTransitionableState type
-   * @param val2 constructor arguments?
+   * @param args List of argument of a scripted constructor. olny the first one seems to work?
    * @return ScriptedFlxTransitionableState
    */
-  public static function init(className:String,val2:String = ''):ScriptedFlxTransitionableState {
+  public static function init(className:String,...args:Any):ScriptedFlxTransitionableState {
     return null;
   }
   /**

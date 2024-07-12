@@ -68,7 +68,7 @@ class WaveformSprite extends MeshRender
    */
   public var time(default, set):Float;
 
-  function set_time(value:Float)
+  public function set_time(value:Float)
   {
     if (time == value) return value;
 
@@ -83,7 +83,7 @@ class WaveformSprite extends MeshRender
    */
   public var duration(default, set):Float;
 
-  function set_duration(value:Float)
+  public function set_duration(value:Float)
   {
     if (duration == value) return value;
 

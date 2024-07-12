@@ -11,10 +11,10 @@ class ScriptedFunkinSprite extends funkin.graphics.FunkinSprite {
   /**
    * Initializes a scripted class instance using the given scripted class name and constructor arguments.
    * @param className Name of the target class extending ScriptedFunkinSprite type
-   * @param val2 constructor arguments?
+   * @param args List of argument of a scripted constructor. olny the first one seems to work?
    * @return ScriptedFunkinSprite
    */
-  public static function init(className:String,val2:String = ''):ScriptedFunkinSprite {
+  public static function init(className:String,...args:Any):ScriptedFunkinSprite {
     return null;
   }
   /**

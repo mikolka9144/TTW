@@ -82,7 +82,7 @@ class MusicBeatSubState extends FlxSubState implements IEventHandler
     dispatchEvent(new UpdateScriptEvent(elapsed));
   }
 
-  function debug_refreshModules()
+  public function debug_refreshModules()
   {
     PolymodHandler.forceReloadAssets();
 

@@ -155,7 +155,7 @@ class Test
         var result = stripPackage ? filter.replace(content, "") : content;
         if (convertCasts) result = ~/cast *\((.*),.*\)/g.replace(result, "$1"); // strip casts (polymod doesn't need them)
         if (convertImports) result = ~/import +([a-zA-z.]*)\.[A-Z]\w+\.([A-Z]\w+);/g.replace(result, "import $1.$2;");
-        if (mockPolymodCalls) result = ~/\.polymodExecFunc *\((.*),(.*)\)/sg.replace(result, ".scriptCall($1,$2)");
+        if (mockPolymodCalls) result = ~/\.polymodExecFunc *\((.*),(\W*\[.*\]\W*)\)/g.replace(result, ".scriptCall($1,$2)");
 
         var filePackage = filter.matched(1).split(".");
         filePackage[0] = Path.join([baseGane_modDir, Mod_Directory, 'scripts']);

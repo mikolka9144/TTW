@@ -258,7 +258,7 @@ class DJBoyfriend extends FlxAtlasSprite
     // loadCartoon();
   }
 
-  function loadCartoon()
+  public function loadCartoon()
   {
     cartoonSnd = FunkinSound.load(Paths.sound(getRandomFlashToon()), 1.0, false, true, true, function() {
       anim.play("Boyfriend DJ watchin tv OG", true, false, 60);
@@ -325,7 +325,7 @@ class DJBoyfriend extends FlxAtlasSprite
     applyAnimOffset();
   }
 
-  function applyAnimOffset()
+  public function applyAnimOffset()
   {
     var AnimName = getCurrentAnimation();
     var daOffset = animOffsets.get(AnimName);

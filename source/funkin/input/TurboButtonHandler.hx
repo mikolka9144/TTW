@@ -42,7 +42,7 @@ class TurboButtonHandler extends FlxBasic
 
   public var allPressedTime:Float = 0;
 
-  function new(inputs:Array<FlxGamepadInputID>, delay:Float = DEFAULT_DELAY, interval:Float = DEFAULT_INTERVAL, ?targetGamepad:FlxGamepad)
+  public function new(inputs:Array<FlxGamepadInputID>, delay:Float = DEFAULT_DELAY, interval:Float = DEFAULT_INTERVAL, ?targetGamepad:FlxGamepad)
   {
     super();
     this.inputs = inputs;

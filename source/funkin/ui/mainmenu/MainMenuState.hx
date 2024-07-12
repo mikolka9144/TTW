@@ -222,35 +222,35 @@ class MainMenuState extends MusicBeatState
     // #end
   }
 
-  function onMenuItemChange(selected:MenuListItem)
+  public function onMenuItemChange(selected:MenuListItem)
   {
     camFollow.setPosition(selected.getGraphicMidpoint().x, selected.getGraphicMidpoint().y);
   }
 
   #if CAN_OPEN_LINKS
-  function selectDonate()
+  public function selectDonate()
   {
     WindowUtil.openURL(Constants.URL_ITCH);
   }
 
-  function selectMerch()
+  public function selectMerch()
   {
     WindowUtil.openURL(Constants.URL_MERCH);
   }
   #end
 
   #if newgrounds
-  function selectLogin()
+  public function selectLogin()
   {
     openNgPrompt(NgPrompt.showLogin());
   }
 
-  function selectLogout()
+  public function selectLogout()
   {
     openNgPrompt(NgPrompt.showLogout());
   }
 
-  function showSavedSessionFailed()
+  public function showSavedSessionFailed()
   {
     openNgPrompt(NgPrompt.showSavedSessionFailed());
   }
@@ -274,7 +274,7 @@ class MainMenuState extends MusicBeatState
     openPrompt(prompt, onPromptClose);
   }
 
-  function checkLoginStatus()
+  public function checkLoginStatus()
   {
     var prevLoggedIn = menuItems.has("logout");
     if (prevLoggedIn && !NGio.isLoggedIn) menuItems.resetItem("login", "logout", selectLogout);

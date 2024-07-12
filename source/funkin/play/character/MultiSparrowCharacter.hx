@@ -94,7 +94,7 @@ class MultiSparrowCharacter extends BaseCharacter
     this.setScale(_data.scale);
   }
 
-  function buildAnimations()
+  public function buildAnimations()
   {
     trace('[MULTISPARROWCHAR] Loading ${_data.animations.length} animations for ${characterId}');
 

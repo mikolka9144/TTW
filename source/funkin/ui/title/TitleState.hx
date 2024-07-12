@@ -74,7 +74,7 @@ class TitleState extends MusicBeatState
       startIntro();
   }
 
-  function client_onMetaData(metaData:Dynamic)
+  public function client_onMetaData(metaData:Dynamic)
   {
     video.attachNetStream(netStream);
 
@@ -372,7 +372,7 @@ class TitleState extends MusicBeatState
     }
   }
 
-  function codePress(input:Int)
+  public function codePress(input:Int)
   {
     if (input == cheatArray[curCheatPos])
     {
@@ -404,7 +404,7 @@ class TitleState extends MusicBeatState
     FunkinSound.playOnce(Paths.sound('confirmMenu'), 0.7);
   }
 
-  function createCoolText(textArray:Array<String>)
+  public function createCoolText(textArray:Array<String>)
   {
     if (credGroup == null || textGroup == null) return;
 
@@ -418,7 +418,7 @@ class TitleState extends MusicBeatState
     }
   }
 
-  function addMoreText(text:String)
+  public function addMoreText(text:String)
   {
     if (credGroup == null || textGroup == null) return;
 
@@ -430,7 +430,7 @@ class TitleState extends MusicBeatState
     textGroup.add(coolText);
   }
 
-  function deleteCoolText()
+  public function deleteCoolText()
   {
     if (credGroup == null || textGroup == null) return;
 

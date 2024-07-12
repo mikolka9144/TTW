@@ -11,10 +11,10 @@ class ScriptedFlxSpriteGroup extends flixel.group.FlxSpriteGroup.FlxTypedSpriteG
   /**
    * Initializes a scripted class instance using the given scripted class name and constructor arguments.
    * @param className Name of the target class extending ScriptedFlxSpriteGroup type
-   * @param val2 constructor arguments?
+   * @param args List of argument of a scripted constructor. olny the first one seems to work?
    * @return ScriptedFlxSpriteGroup
    */
-  public static function init(className:String,val2:String = ''):ScriptedFlxSpriteGroup {
+  public static function init(className:String,...args:Any):ScriptedFlxSpriteGroup {
     return null;
   }
   /**

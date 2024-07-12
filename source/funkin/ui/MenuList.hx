@@ -219,7 +219,7 @@ class MenuListItem extends FlxSprite
 
   public var selected(get, never):Bool;
 
-  function get_selected()
+  public function get_selected()
     return alpha == 1.0;
 
   public function new(x = 0.0, y = 0.0, name:String, callback)
@@ -230,7 +230,7 @@ class MenuListItem extends FlxSprite
     idle();
   }
 
-  function setData(name:String, ?callback:Void->Void)
+  public function setData(name:String, ?callback:Void->Void)
   {
     this.name = name;
 
@@ -276,7 +276,7 @@ class MenuTypedItem<T:FlxSprite> extends MenuListItem
   /**
    * Use this when you only want to show the label
    */
-  function setEmptyBackground()
+  public function setEmptyBackground()
   {
     var oldWidth = width;
     var oldHeight = height;
@@ -285,7 +285,7 @@ class MenuTypedItem<T:FlxSprite> extends MenuListItem
     height = oldHeight;
   }
 
-  function set_label(value:T)
+  public function set_label(value:T)
   {
     if (value != null)
     {

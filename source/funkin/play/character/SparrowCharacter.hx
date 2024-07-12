@@ -29,7 +29,7 @@ class SparrowCharacter extends BaseCharacter
     super.onCreate(event);
   }
 
-  function loadSpritesheet()
+  public function loadSpritesheet()
   {
     trace('[SPARROWCHAR] Loading spritesheet ${_data.assetPath} for ${characterId}');
 
@@ -56,7 +56,7 @@ class SparrowCharacter extends BaseCharacter
     this.setScale(_data.scale);
   }
 
-  function loadAnimations()
+  public function loadAnimations()
   {
     trace('[SPARROWCHAR] Loading ${_data.animations.length} animations for ${characterId}');
 

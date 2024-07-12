@@ -43,7 +43,7 @@ class AtlasText extends FlxTypedSpriteGroup<AtlasChar>
     this.text = text;
   }
 
-  function set_text(value:String)
+  public function set_text(value:String)
   {
     if (value == null) value = "";
 
@@ -88,7 +88,7 @@ class AtlasText extends FlxTypedSpriteGroup<AtlasChar>
    * Converts all characters to fit the font's `allowedCase`.
    * @param text
    */
-  function restrictCase(text:String)
+  public function restrictCase(text:String)
   {
     return switch (caseAllowed)
     {
@@ -102,7 +102,7 @@ class AtlasText extends FlxTypedSpriteGroup<AtlasChar>
    * Adds new text on top of the existing text. Helper for other methods; DOESN'T CHANGE `this.text`.
    * @param text The text to add, assumed to match the font's `caseAllowed`.
    */
-  function appendTextCased(text:String)
+  public function appendTextCased(text:String)
   {
     var charCount = group.countLiving();
     var xPos:Float = 0;
@@ -173,7 +173,7 @@ class AtlasChar extends FlxSprite
     this.char = char;
   }
 
-  function set_char(value:String)
+  public function set_char(value:String)
   {
     if (this.char != value)
     {
@@ -193,7 +193,7 @@ class AtlasChar extends FlxSprite
     return this.char = value;
   }
 
-  function getAnimPrefix(char:String)
+  public function getAnimPrefix(char:String)
   {
     return switch (char)
     {

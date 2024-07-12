@@ -54,7 +54,7 @@ class HaxeUISubState extends MusicBeatSubState
     }
   }
 
-  function refreshComponent()
+  public function refreshComponent()
   {
     /*
       if (component != null)
@@ -93,7 +93,7 @@ class HaxeUISubState extends MusicBeatSubState
   /**
    * Add an onClick listener to a HaxeUI menu bar item.
    */
-  function addUIClickListener(key:String, callback:MouseEvent->Void)
+  public function addUIClickListener(key:String, callback:MouseEvent->Void)
   {
     var target:Component = findComponent(key);
     if (target == null)
@@ -110,7 +110,7 @@ class HaxeUISubState extends MusicBeatSubState
   /**
    * Add an onChange listener to a HaxeUI input component such as a slider or text field.
    */
-  function addUIChangeListener(key:String, callback:UIEvent->Void)
+  public function addUIChangeListener(key:String, callback:UIEvent->Void)
   {
     var target:Component = findComponent(key);
     if (target == null)

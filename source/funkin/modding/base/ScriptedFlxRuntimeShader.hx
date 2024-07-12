@@ -11,10 +11,10 @@ class ScriptedFlxRuntimeShader extends flixel.addons.display.FlxRuntimeShader {
   /**
    * Initializes a scripted class instance using the given scripted class name and constructor arguments.
    * @param className Name of the target class extending ScriptedFlxRuntimeShader type
-   * @param val2 constructor arguments?
+   * @param args List of argument of a scripted constructor. olny the first one seems to work?
    * @return ScriptedFlxRuntimeShader
    */
-  public static function init(className:String,val2:String = ''):ScriptedFlxRuntimeShader {
+  public static function init(className:String,...args:Any):ScriptedFlxRuntimeShader {
     return null;
   }
   /**
