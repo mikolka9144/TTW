@@ -29,6 +29,7 @@ Possible to extend with code:
 - [`Levels`](components/level.md)
 - [`Songs`](components/song.md)
 - [`Stages`](components/stage.md)
+- [`NoteStyles`](components/NoteStyles.md)
 
 Unusable
 - [`Albums`](components/albums.md)
