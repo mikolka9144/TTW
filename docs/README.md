@@ -1,17 +1,18 @@
 # Docs
 
-There are 2 main documentations
+There are 3 documentations in this project
 - [V-slice unofficial documentation](v-slice/V-Slice%20modules.md)
-- Original FNF docs in
+- Original FNF docs
+  - [Introduction to V-slice](https://github.com/FunkinCrew/funkin-modding-docs/blob/main/01%20-%20Fundamentals.md)
+  - [How to add custom songs](https://github.com/FunkinCrew/funkin-modding-docs/blob/main/02%20-%20Custom%20Songs%20and%20Custom%20Levels.md)
+  - [How to add custom characters](https://github.com/FunkinCrew/funkin-modding-docs/blob/main/03%20-%20Custom%20Characters.md)
   - [FNFC format (used by charter)](./base_game/FNFC-SPEC.md)
   - [Base game code style guide](./base_game/CODESTYLE.md)
   - [Base game's issue fixes](./base_game/troubleshooting.md)
-- New docs related to this project
+- TTW usage guides
   - [Guide on initial configuration](./ttw/Compile%20guide.md)
-  - [documentation of folder structure](ttw/Code%20structure.md)
-  - [Guide on starting fresh](./ttw/Starting%20fresh.md)
+  - [Guide on the usage of a template](./ttw/Getting%20started.md)
   - [List of compiler's features](./ttw/features.md)
-  - [V-slice mod classes info](./ttw/V-Slice%20modules.md)
   - [TTW issues fixes](./ttw/issues.md)
 
 - Additional [docs](https://haxeflixel.com/documentation/) included with HaxeFlixel

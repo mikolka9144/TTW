@@ -27,8 +27,8 @@ In case you stumble upon any problem, check [common issues](./issues.md) for pot
     - Install all required haxelibs by running `hmm install`
     - Restart IDE
 4. Prepare the code
-    - create "funkinGame" folder and put in it a copy of a V-slice compatible engine (on v.0.4.1)
-    - install any extra mods you want to make use of
+    - create "funkinGame" folder in the root directory and put in it a copy of a V-slice compatible engine (on v0.4.1)
+    - install any extra mods you want to make use of in "funkinGame/mods"
 
-And you *should* be good to go.
+And you *should* be good to go. Head over to [Getting started](Getting%20started.md) if you're unsure what to do next.
 ### TIP: if you Haxe issues with IDE, a simple restart fixes *most of* the problems
