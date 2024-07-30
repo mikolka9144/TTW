@@ -12,7 +12,14 @@
       "type": "node-terminal",
       "request": "launch",
       "name": "Compile mod",
-      "command": "haxe --run Test.hx ; exit",
+      "command": "haxe --run Test.hx just-compile ; exit",
+      "cwd": "${workspaceFolder}/source/ttw"
+    },
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Export mod",
+      "command": "haxe --run Test.hx export ; exit",
       "cwd": "${workspaceFolder}/source/ttw"
     },
     {
