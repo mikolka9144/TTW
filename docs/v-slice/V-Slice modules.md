@@ -1,5 +1,7 @@
 # V-slice Modding
 
+> NOTE: because the devs have made official documentation for V-slice those will be removed soon. That is when knowleade currently provided by it gets integrated...
+
 Welcome to TTW's V-slice modding documentation. Most of the things you see here are still under the writing and might have some missing information or errors of any kind.
 
 This wiki is meant to help you better understand the V-slice modding system,
