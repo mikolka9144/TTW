@@ -17,7 +17,7 @@ In case you stumble upon any problem, check [common issues](./issues.md) for pot
 
 2. Open project in **Vs code** or **VSCodium**
     - If prompted with `Do you trust the authors of the files in this folder?`, select "Yes, I trust the authors"
-    - Under "Build and Run" start `Download Asstes`
+    - Under "Build and Run" start `Download Assets`
         - if you can't see the output, see [here](./issues.md#i-ran-a-task-but-i-cant-see-any-output)
     - Search for `@recommended ` extensions to install necessary extensions and install them
 3. Open terminal within VsCode (using **Ctr+Shift+`**)
