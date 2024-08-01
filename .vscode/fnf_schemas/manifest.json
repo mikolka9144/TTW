@@ -5,17 +5,17 @@
   "properties": {
     "title": {
       "type": "string",
-      "description": "A name of your mod.",
+      "description": "A readable name for the mod.",
       "minLength": 1
     },
     "description": {
-      "description": "A short (or long) description of your mod. It'll appear in the mod menu when the user selects your mod.",
+      "description": "A readable description for the mod.",
       "type": "string",
       "minLength": 1
     },
     "homepage": {
       "type": "string",
-      "description": "A website of your mod (If it has one)"
+      "description": "A URL where users can learn more about your mod."
     },
     "metadata": {
       "type": "object",
@@ -31,12 +31,12 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "A name of this author.",
+            "description": "The contributor's name.",
             "minLength": 1
           },
           "role": {
             "type": "string",
-            "description": "A role this author had in creation of this mod."
+            "description": "The role the contributor played, for example 'Artist' or 'Programmer'."
           },
           "email": {
             "type": "string",
@@ -51,21 +51,21 @@
     },
     "dependencies": {
       "type": "object",
-      "description": "A list of mods that this mods depends on and and their versions. Without those present your mod won't be loaded."
+      "description": "A map of mod IDs which are mandatory dependencies, along with their version numbers. Without those mods present your mod won't be loaded."
     },
     "optionalDependencies": {
       "type": "object",
-      "description": "A list of mods that this mods can depend on and their versions. In case those are present they'll be loaded BEFORE your mod."
+      "description": "A map of mod IDs which are optional dependencies, along with their version numbers. In case those are present they'll be loaded BEFORE your mod."
     },
     "api_version": {
       "type": "string",
-      "description": "FNF's API version this mod makes use of",
+      "description": "FNF's API version this mod makes use of.",
       "default": "0.1.0",
       "minLength": 1
     },
     "mod_version": {
       "type": "string",
-      "description": "Current version of this mod (you can change this when exporting the mod)",
+      "description": "Current version of this mod (you can change this when exporting the mod).",
       "minLength": 1
     },
     "license": {

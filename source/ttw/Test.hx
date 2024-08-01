@@ -87,13 +87,8 @@ class Test
 
   static function Task_ExportGame()
   {
+    if (!isManifestPresent()) Sys.exit(0);
     var manifestPath = '../../$modAssetsDir/_polymod_meta.json';
-
-    if (!FileSystem.exists(manifestPath))
-    {
-      displayError("Your mod doesn't contain \"_polymod_meta.json\". Please create a valid metadata file for this mod first!");
-      return;
-    }
     var poly_json = File.getContent(manifestPath);
 
     var varGetter:EReg = ~/"mod_version": *"([0-9.]+)" */i;
@@ -131,8 +126,21 @@ class Test
     zip.write(nodes);
   }
 
+  static function isManifestPresent():Bool
+  {
+    var manifestPath = '../../$modAssetsDir/_polymod_meta.json';
+
+    if (!FileSystem.exists(manifestPath))
+    {
+      displayError("Your mod doesn't contain \"_polymod_meta.json\". Please create a valid metadata file for this mod first!");
+      return false;
+    }
+    return true;
+  }
+
   static function Task_CompileGame()
   {
+    if (!isManifestPresent()) Sys.exit(0);
     deleteDirRecursively(Path.join([baseGane_modDir, Mod_Directory]));
     copyTemplate();
     compileFnfcFiles();

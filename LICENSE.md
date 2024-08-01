@@ -10,6 +10,10 @@ All Rights Reserved. "Friday Night Funkin'" and the "Friday Night Funkin'" logo 
 
 The code under `source/ttw` is also licensed under Apache 2.0 license and DOES NOT belong to The Funkin' Crew Inc. in any way, shape or form.
 
+## Friday Night Funkin' Documentation
+
+Json schemas use information taken from the official documentation, as such files in `.vscode/fnf_schemas` are licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+
 ## Apache 2.0 License
 
                                  Apache License

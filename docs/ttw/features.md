@@ -20,5 +20,5 @@ Removes `package` definition from files (at the beginning of the file)
 
 ### Module.scriptCall() fix `mockPolymodCalls`
 
-Allows you to use a documented `Module.`polymodExecFunc()` function instead of the missing one.
+Allows you to use a documented `Module.polymodExecFunc()` function instead of the missing one.
 It will be converted to the `Module.scriptCall()` once compiled.

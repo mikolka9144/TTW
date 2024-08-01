@@ -3,6 +3,8 @@ This step-by-step guide will help you set up this project for v-slice mod creati
 
 In case you stumble upon any problem, check [common issues](./issues.md) for potential solutions.
 
+> TIP: if you have issues with your IDE, a simple restart fixes *most of* the problems
+
 0. Setup
     - Install Haxe from [Haxe.org](https://haxe.org)
     - Install [Visual Studio](https://code.visualstudio.com/Download) or [VSCodium](https://vscodium.com/#install)
@@ -15,7 +17,7 @@ In case you stumble upon any problem, check [common issues](./issues.md) for pot
 
 2. Open project in **Vs code** or **VSCodium**
     - If prompted with `Do you trust the authors of the files in this folder?`, select "Yes, I trust the authors"
-    - Under "Build and Run" start `Download Assets`
+    - Under "Build and Run" start `Download Asstes`
         - if you can't see the output, see [here](./issues.md#i-ran-a-task-but-i-cant-see-any-output)
     - Search for `@recommended ` extensions to install necessary extensions and install them
 3. Open terminal within VsCode (using **Ctr+Shift+`**)
@@ -27,8 +29,6 @@ In case you stumble upon any problem, check [common issues](./issues.md) for pot
     - Install all required haxelibs by running `hmm install`
     - Restart IDE
 4. Prepare the code
-    - create "funkinGame" folder in the root directory and put in it a copy of a V-slice compatible engine (on v0.4.1)
-    - install any extra mods you want to make use of in "funkinGame/mods"
+    - create "funkinGame" folder in the root directory and put into it a copy of V-slice compatible engine (on v0.4.1)
 
 And you *should* be good to go. Head over to [Getting started](Getting%20started.md) if you're unsure what to do next.
-### TIP: if you Haxe issues with IDE, a simple restart fixes *most of* the problems

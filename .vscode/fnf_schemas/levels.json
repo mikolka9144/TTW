@@ -5,28 +5,28 @@
   "properties": {
     "version": {
       "type": "string",
-      "description": "A version of the level format this file uses. This can controll thethever certain features are available to you, or if this file will load at all.",
+      "description": "The version number for the Level data file format. This can control whethever certain features are available to you or if this file will load at all.",
       "default": "1.0.1",
       "minLength": 1
     },
     "name": {
       "type": "string",
-      "description": "Week's title in the top right part of a story menu screen.",
+      "description": "The version number for the Level data file format.",
       "minLength": 1
     },
     "visible": {
       "type": "boolean",
       "default": true,
-      "description": "Controls thethever this week and it's songs can be played by the player."
+      "description": "Whether this story level is visible in the Story Menu."
     },
     "titleAsset": {
       "type": "string",
-      "description": "A graphic to use for this week in a week selector",
+      "description": "The asset to use for the level name in the list of level, relative to the 'images' folder in your mod folder.",
       "minLength": 1
     },
     "props": {
       "type": "array",
-      "description": "A list of props to render on the background of this week",
+      "description": "Data for the props to display on the Story Menu when the level is selected. For example, Week 1 will display Daddy Dearest, Boyfriend, and Girlfriend.",
       "uniqueItems": true,
       "minItems": 0,
       "items": {
@@ -49,7 +49,7 @@
           },
           "danceEvery": {
             "type": "number",
-            "description": "How often (in beats) should this prop bop to the music",
+            "description": "How often (in beats) should this prop bop to the music.",
             "default": 1
           },
           "isPixel": {
@@ -119,7 +119,7 @@
     "background": {
       "type": "string",
       "default": "#F9CF51",
-      "description": "Path to the image to use as a background for week's props. Alternatively you can put here a color code if you want to use plain color as a background.",
+      "description": "The background to use for the level. #F9CF51 is the classic yellow, but this field takes either a color code OR an image file path (relative to the images folder in your mod folder).",
       "minLength": 1
     },
     "songs": {

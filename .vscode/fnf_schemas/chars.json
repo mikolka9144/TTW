@@ -5,13 +5,13 @@
   "properties": {
     "version": {
       "type": "string",
-      "description": "Version of CharacterData format this character uses.",
+      "description": "The version number for the Character data file format.",
       "default": "1.0.1",
       "minLength": 1
     },
     "name": {
       "type": "string",
-      "description": "Name of this character in chart editor.",
+      "description": "The readable name for the character, used in places like the Chart Editor.",
       "minLength": 1
     },
     "renderType": {
@@ -23,7 +23,7 @@
     },
     "assetPath": {
       "type": "string",
-      "description": "Path to this character's sprite. This depends on the 'renderType' this character uses.",
+      "description": "The main asset path to use for this character, relative to the images directory in your mod folder. This value depends on the 'renderType' this character uses.",
       "minLength": 1
     },
     "scale": {
@@ -86,12 +86,12 @@
     "singTime": {
       "type": "number",
       "default": 1.0,
-      "description": "Minimum length (in beats) for which this character will sing a single note."
+      "description": "The amount of time, in steps, for a character to keep singing after they let go of a note."
     },
     "startingAnimation": {
       "type": "string",
       "default": "idle",
-      "description": "Initial animation to use for this character after creating it.",
+      "description": "The animation for the character to play when they are first loaded in.",
       "minLength": 1
     },
     "animations": {
@@ -104,11 +104,15 @@
           "offsets": {
             "type": "array",
             "default": [0, 0],
-            "description": "Offset from this character's real position when playing this animation"
+            "description": "Offset from this character's real position when playing this animation."
+          },
+          "assetPath": {
+            "type": "string",
+            "description": "If this character uses 'multisparrow' rendering, this will let you define different spritesheet to use for this animation."
           },
           "flipY": {
             "default": false,
-            "description": "Whethever to flip Y axis of this character when playing this animation",
+            "description": "Whethever to flip Y axis of this character when playing this animation.",
             "type": "boolean"
           },
           "frameRate": {
@@ -118,7 +122,7 @@
           },
           "prefix": {
             "type": "string",
-            "description": "Prefix of all frames making up this animation. Optional for 'Packer' characters.",
+            "description": "The animation name as specified by your spritesheet.",
             "minLength": 1
           },
           "name": {

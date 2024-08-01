@@ -7,15 +7,21 @@ Instead I'll guide you through the most important parts of this template:
 
 This folder contains all non-code assets of your mod. If you're working with already existing mod, then that's the place for all the files of the mod.
 
-It's also possible to put there ".hxc" files (more on that later)
+Think of it as a "base" for your mod to which then you can add thinhs by either writing code, or putting .fnfc files into `fnfc_files`.
+
+It's still possible to put additional .hxc files into `mod_base/scripts` like custom song events or scripts you find on the internet, which you want to use.
 
 ## `mod_base/data` folder
 
-This folder houses all data related things of your mod. For most of them you can simply create a file "<id>.json" and use included json scemas to create said object (for now works with levels,stages and characters).
+This folder houses all data related things of your mod. For most of them you can simply create a json file in a desired sub-folder and use included json scemas to create said data object (for now works with levels,stages and characters).
 
 ## `fnfc_files` folder
 
-This folder stores all songs used by the mod in `.fnfc` format. You don't necessary have to use it, but will make editing songs in FNF's chart editor much easier.
+This folder stores all songs used by the mod in `.fnfc` format. Those get compiled with the rest of your code.
+
+You are still able to manually extract necessary files, but it's recommended to avoid doing that (mostly due to cleanness and ease of editing).
+
+You can also create sub-directories for your songs. It doesn't any other purpouse than letting you structure your songs.
 
 ## `source/mod` folder
 
@@ -23,14 +29,15 @@ This folder houses all script files, that will be later compiled with the rest o
 
 The structure made in this folder will be replicated in "scripts" folder of your mod merging with `mod_base/scripts` if you decide to put any scripts outside this template (like song events).
 
-It's recommended to put there all files from "scripts" folder of your mod into this one.
+It's recommended to put into `source/mod` all files from "scripts" folder of your existing mod into this one (if you have any).
+
 While doing so remember to:
 - change `.hxc` extension to `.hx`
-- add `package` line to them (your IDE should help you with that or look into examples included)
+- add `package` line to the beginning of them (your IDE should help you with that)
 
 ## Getting your funkin mod to **funk**
 
-To see your mod in action head over to "Run and Debug" section of your IDE,which has necessary task to let you playtest your mod:
+To see your mod in action head over to "Run and Debug" section of your IDE, which has necessary task to let you playtest your mod:
 - `Download assets` *no need to use this at this point*
 - `Compile Mod` Exports your mod to a v-slice engine located in "funkinGame". It'll be put in "funkinGame/mods/workbench" unless otherwise defined in "Test.hx".
 - `Launch Mod` Starts up your engine (stopping this task will also stop the game. Useful in some cases)
