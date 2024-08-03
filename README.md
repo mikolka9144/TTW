@@ -7,10 +7,10 @@ This template brings the possibilities and luxuries of writing source mods to th
 This project focuses on both documenting scripting format used by the game while also providing much better environment for creating those.
 
 # Quick Navigation
-Configure this environment with the help of [this guide](./docs/ttw/Compile%20guide.md)
+Configure this environment with the help of [this guide](https://github.com/mikolka9144/TTW/wiki/Compile-guide)
 
-If case you stumble on any problems, please refer [here](./docs/ttw/issues.md) and [here](./docs/base_game/troubleshooting.md)
+If case you stumble on any problems, please refer [here](https://github.com/mikolka9144/TTW/wiki/issues) and [here](https://github.com/mikolka9144/TTW/wiki/troubleshooting)
 
-Feel free to look into [Getting started](docs/ttw/Getting%20started.md) if you want to learn how to **actually** use it
+Feel free to look into [Getting started](https://github.com/mikolka9144/TTW/wiki/Getting-started) if you want to learn how to **actually** use it.
 
-Check out the [documentation](./docs/README.md) for more.
+Check out the [wiki](https://github.com/mikolka9144/TTW/wiki) for more information about this template.
