@@ -91,11 +91,13 @@ typedef LevelPropData =
 
   /**
    * The frequency to bop at, in beats.
-   * @default 1 = every beat, 2 = every other beat, etc.
+   * 1 = every beat, 2 = every other beat, etc.
+   * Supports up to 0.25 precision.
+   * @default 1.0
    */
-  @:default(1)
+  @:default(1.0)
   @:optional
-  public var danceEvery:Int;
+  public var danceEvery:Float;
 
   /**
    * The offset on the position to render the prop at.

@@ -35,6 +35,20 @@ class AssetRipper
     "exclude/data/ui/chart-editor/toolboxes/metadata.xml",
     "exclude/data/ui/chart-editor/toolboxes/note-data.xml",
     "exclude/data/ui/chart-editor/toolboxes/offsets.xml",
+    "exclude/data/ui/stage-editor/main-view.xml",
+    "exclude/data/ui/stage-editor/toolboxes/stage-settings.xml",
+    "exclude/data/ui/stage-editor/toolboxes/object-properties.xml",
+    "exclude/data/ui/stage-editor/toolboxes/character-properties.xml",
+    "exclude/data/ui/stage-editor/dialogs/about.xml",
+    "exclude/data/ui/stage-editor/dialogs/exit-confirm.xml",
+    "exclude/data/ui/stage-editor/dialogs/find-object.xml",
+    "exclude/data/ui/stage-editor/dialogs/load-url.xml",
+    "exclude/data/ui/stage-editor/dialogs/new-object.xml",
+    "exclude/data/ui/stage-editor/dialogs/user-guide.xml",
+    "exclude/data/ui/stage-editor/dialogs/welcome.xml",
+    "exclude/data/ui/stage-editor/components/menu.xml",
+    "exclude/data/ui/stage-editor/components/bottom-bar.xml",
+    "exclude/data/ui/stage-editor/components/style.xml"
   ];
   public static var downTemplate = "https://raw.githubusercontent.com/FunkinCrew/funkin.assets/main/";
 

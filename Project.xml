@@ -29,6 +29,7 @@
 	<set name="BUILD_DIR" value="export/release" unless="debug" />
 	<set name="BUILD_DIR" value="export/32bit" if="32bit" />
 	<classpath name="source" />
+	<classpath name="source/mod" />
 
 	<!-- <define name="PRELOAD_ALL" unless="web" /> -->
 	<define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL" />
@@ -64,17 +65,19 @@
 	<haxelib name="flxanimate" /> <!-- Texture atlas rendering -->
 	<haxelib name="funkin.vis"/>
 	<haxelib name="grig.audio" />
+	<haxelib name="hxCodec" />
 
 	<haxelib name="FlxPartialSound" /> <!-- Loading partial sound data -->
 
 	<haxelib name="json2object" /> <!-- JSON parsing -->
+	<haxelib name="jsonpath" />
 	<haxelib name="thx.core" /> <!-- General utility library, "the lodash of Haxe" -->
 	<haxelib name="thx.semver" /> <!-- Version string handling -->
 
 	<!-- <haxelib name="hxcpp-debug-server" if="desktop debug" /> VSCode debug support -->
 
 	<!--Disable the Flixel core focus lost screen-->
-	<haxedef name="FLX_NO_FOCUS_LOST_SCREEN" />
+	<haxedef name="FLX_NO_FOCUS_LOST_SCREEN"/>
 	<!--Disable the Flixel core debugger. Automatically gets set whenever you compile in release mode!-->
 	<haxedef name="FLX_NO_DEBUG" unless="debug || FORCE_DEBUG_VERSION" />
 	<!--Enable this for Nape release builds for a serious peformance improvement-->

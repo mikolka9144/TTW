@@ -20,6 +20,10 @@ class StageData
   @:optional
   public var cameraZoom:Null<Float>;
 
+  @:default("shared")
+  @:optional
+  public var directory:Null<String>;
+
   public function new()
   {
     this.version = StageRegistry.STAGE_DATA_VERSION;
@@ -119,6 +123,22 @@ typedef StageDataProp =
   public var isPixel:Bool;
 
   /**
+   * If set to true, the prop will be flipped horizontally.
+   * @default false
+   */
+  @:optional
+  @:default(false)
+  public var flipX:Bool;
+
+  /**
+   * If set to true, the prop will be flipped vertically.
+   * @default false
+   */
+  @:optional
+  @:default(false)
+  public var flipY:Bool;
+
+  /**
    * Either the scale of the prop as a float, or the [w, h] scale as an array of two floats.
    * Pro tip: On pixel-art levels, save the sprite small and set this value to 6 or so to save memory.
    */
@@ -140,12 +160,12 @@ typedef StageDataProp =
    * If not zero, this prop will play an animation every X beats of the song.
    * This requires animations to be defined. If `danceLeft` and `danceRight` are defined,
    * they will alternated between, otherwise the `idle` animation will be used.
-   *
-   * @default 0
+   * Supports up to 0.25 precision.
+   * @default 0.0
    */
-  @:default(0)
+  @:default(0.0)
   @:optional
-  public var danceEvery:Int;
+  public var danceEvery:Float;
 
   /**
    * How much the prop scrolls relative to the camera. Used to create a parallax effect.
@@ -182,6 +202,32 @@ typedef StageDataProp =
   @:default("sparrow")
   @:optional
   public var animType:String;
+
+  /**
+   * The angle of the prop, as a float.
+   * @default 1.0
+   */
+  @:optional
+  @:default(0.0)
+  public var angle:Float;
+
+  /**
+   * The blend mode of the prop, as a string.
+   * Just like in photoshop.
+   * @default Nothing.
+   */
+  @:default("")
+  @:optional
+  public var blend:String;
+
+  /**
+   * The color of the prop overlay, as a hex string.
+   * White overlays, or the ones with the value #FFFFFF, do not appear.
+   * @default `#FFFFFF`
+   */
+  @:default("#FFFFFF")
+  @:optional
+  public var color:String;
 };
 
 typedef StageDataCharacter =

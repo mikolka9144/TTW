@@ -14,6 +14,12 @@
       "description": "The default camera zoom level for the stage.",
       "type": "number"
     },
+    "directory": {
+      "type": "string",
+      "description": "Asset folder/library this stage uses.",
+      "default": "shared",
+      "minLength": 1
+    },
     "props": {
       "type": "array",
       "description": "An array of props to add to the stage, specifying what sprites should be used and where those sprites should be positioned.",
@@ -32,6 +38,33 @@
             "default": 1,
             "type": "number"
           },
+          "angle": {
+            "type": "number",
+            "description": "The angle of the prop, as a float.",
+            "default": 1.0
+          },
+          "blend": {
+            "type": "string",
+            "enum": [
+              "",
+              "ADD",
+              "ALPHA",
+              "DARKEN",
+              "DIFFERENCE",
+              "ERASE",
+              "HARDLIGHT",
+              "INVERT",
+              "LAYER",
+              "LIGHTEN",
+              "MULTIPLY",
+              "NORMAL",
+              "SCREEN",
+              "SHADER",
+              "SUBTRACT"
+            ],
+            "description": "The blend mode of the prop. For more information about blend modes, see https://api.openfl.org/openfl/display/BlendMode.html",
+            "default": ""
+          },
           "position": {
             "type": "array",
             "description": "The horizontal and vertical position of the prop, in pixels.",
@@ -45,6 +78,12 @@
           "name": {
             "type": "string",
             "description": "The name of this prop. You only need this if you want to refer to this prop later in the code with `PlayState.instance.currentStage.getNamedProp(name)`.",
+            "minLength": 1
+          },
+          "color": {
+            "type": "string",
+            "default": "#FFFFFF",
+            "description": "The color of the prop overlay, as a hex string. White overlays, or the ones with the value #FFFFFF, do not appear.",
             "minLength": 1
           },
           "animType": {

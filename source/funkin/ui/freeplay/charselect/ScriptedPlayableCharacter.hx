@@ -1,20 +1,20 @@
-package funkin.modding.base;
+package funkin.ui.freeplay.charselect;
 
 /**
- * A script that can be tied to an FlxUIState.
- * Create a scripted class that extends FlxUIState to use this.
+ * A script that can be tied to a PlayableCharacter.
+ * Create a scripted class that extends PlayableCharacter to use this.
  */
-class ScriptedFlxUIState extends flixel.addons.ui.FlxUIState {
+class ScriptedPlayableCharacter extends funkin.ui.freeplay.charselect.PlayableCharacter {
   //! mock calls
   //* real implementations are handled by polymod
 
   /**
    * Initializes a scripted class instance using the given scripted class name and constructor arguments.
-   * @param className Name of the target class extending ScriptedFlxUIState type
+   * @param className Name of the target class extending ScriptedPlayableCharacter type
    * @param args List of argument of a scripted constructor. olny the first one seems to work?
-   * @return ScriptedFlxUIState
+   * @return ScriptedPlayableCharacter
    */
-  public static function init(className:String,...args:Any):ScriptedFlxUIState {
+  public static function init(className:String,...args:Any):ScriptedPlayableCharacter {
     return null;
   }
   /**
@@ -45,7 +45,7 @@ class ScriptedFlxUIState extends flixel.addons.ui.FlxUIState {
 	 */
 	 public function scriptSet(fieldName:String, value:Dynamic):Dynamic{return null; }
    /**
-    * Returns a list of all the scripted classes which extend ScriptedFlxUIState.
+    * Returns a list of all the scripted classes which extend ScriptedPlayableCharacter.
     * @return Array<String> THE list
     */
    public static function listScriptClasses():Array<String> {return null; }

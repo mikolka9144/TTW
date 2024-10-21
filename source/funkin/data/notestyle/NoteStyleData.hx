@@ -74,6 +74,84 @@ typedef NoteStyleAssetsData =
    */
   @:optional
   public var holdNoteCover:NoteStyleAssetData<NoteStyleData_HoldNoteCover>;
+
+  /**
+   * The THREE sound (and an optional pre-READY graphic).
+   */
+  @:optional
+  public var countdownThree:NoteStyleAssetData<NoteStyleData_Countdown>;
+
+  /**
+   * The TWO sound and READY graphic.
+   */
+  @:optional
+  public var countdownTwo:NoteStyleAssetData<NoteStyleData_Countdown>;
+
+  /**
+   * The ONE sound and SET graphic.
+   */
+  @:optional
+  public var countdownOne:NoteStyleAssetData<NoteStyleData_Countdown>;
+
+  /**
+   * The GO sound and GO! graphic.
+   */
+  @:optional
+  public var countdownGo:NoteStyleAssetData<NoteStyleData_Countdown>;
+
+  /**
+   * The SICK! judgement.
+   */
+  @:optional
+  public var judgementSick:NoteStyleAssetData<NoteStyleData_Judgement>;
+
+  /**
+   * The GOOD! judgement.
+   */
+  @:optional
+  public var judgementGood:NoteStyleAssetData<NoteStyleData_Judgement>;
+
+  /**
+   * The BAD! judgement.
+   */
+  @:optional
+  public var judgementBad:NoteStyleAssetData<NoteStyleData_Judgement>;
+
+  /**
+   * The SHIT! judgement.
+   */
+  @:optional
+  public var judgementShit:NoteStyleAssetData<NoteStyleData_Judgement>;
+
+  @:optional
+  public var comboNumber0:NoteStyleAssetData<NoteStyleData_ComboNum>;
+
+  @:optional
+  public var comboNumber1:NoteStyleAssetData<NoteStyleData_ComboNum>;
+
+  @:optional
+  public var comboNumber2:NoteStyleAssetData<NoteStyleData_ComboNum>;
+
+  @:optional
+  public var comboNumber3:NoteStyleAssetData<NoteStyleData_ComboNum>;
+
+  @:optional
+  public var comboNumber4:NoteStyleAssetData<NoteStyleData_ComboNum>;
+
+  @:optional
+  public var comboNumber5:NoteStyleAssetData<NoteStyleData_ComboNum>;
+
+  @:optional
+  public var comboNumber6:NoteStyleAssetData<NoteStyleData_ComboNum>;
+
+  @:optional
+  public var comboNumber7:NoteStyleAssetData<NoteStyleData_ComboNum>;
+
+  @:optional
+  public var comboNumber8:NoteStyleAssetData<NoteStyleData_ComboNum>;
+
+  @:optional
+  public var comboNumber9:NoteStyleAssetData<NoteStyleData_ComboNum>;
 }
 
 /**
@@ -110,9 +188,18 @@ typedef NoteStyleAssetData<T> =
   public var isPixel:Bool;
 
   /**
+   * If true, animations will be played on the graphic.
+   * @default `false` to save performance.
+   */
+  @:default(false)
+  @:optional
+  public var animated:Bool;
+
+  /**
    * The structure of this data depends on the asset.
    */
-  public var data:T;
+  @:optional
+  public var data:Null<T>;
 }
 
 typedef NoteStyleData_Note =
@@ -123,7 +210,14 @@ typedef NoteStyleData_Note =
   public var right:UnnamedAnimationData;
 }
 
+typedef NoteStyleData_Countdown =
+{
+  public var audioPath:String;
+}
+
 typedef NoteStyleData_HoldNote = {}
+typedef NoteStyleData_Judgement = {}
+typedef NoteStyleData_ComboNum = {}
 
 /**
  * Data on animations for each direction of the strumline.

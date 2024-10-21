@@ -10,6 +10,8 @@ import funkin.play.PlayState;
 import funkin.modding.events.ScriptEvent.UpdateScriptEvent;
 import funkin.modding.events.ScriptEvent.SongTimeScriptEvent;
 import funkin.modding.module.Module;
+import lime.utils.AssetManifest;
+import funkin.util.ReflectUtil;
 
 /**
  * This class will show how to create playState scripts
@@ -49,6 +51,8 @@ class ExamplePlayStateScript extends Module
     {
       FunkinSound.playOnce(Paths.sound("chartingSounds/metronome2"), 0.4);
     }
+    trace(ReflectUtil.getAnonymousFieldsOf(AssetManifest.parse('{"assets":"cy7:Polymodyg","version":3}').assets));
+
     super.onBeatHit(event);
   }
 

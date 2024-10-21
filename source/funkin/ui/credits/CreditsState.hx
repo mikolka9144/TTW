@@ -34,7 +34,13 @@ class CreditsState extends MusicBeatState
    * To use a font from the `assets` folder, use `Paths.font(...)`.
    * Choose something that will render Unicode properly.
    */
+  #if windows
   public static var CREDITS_FONT = 'Consolas';
+  #elseif mac
+  public static var CREDITS_FONT = 'Menlo';
+  #else
+  public static var CREDITS_FONT = "Courier New";
+  #end
 
   /**
    * The size of the font.

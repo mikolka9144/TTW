@@ -1,5 +1,7 @@
 package mod;
 
+import haxe.Log;
+import funkin.modding.module.ScriptedModule;
 import funkin.play.event.ScriptedSongEvent;
 import funkin.play.cutscene.dialogue.ScriptedConversation;
 import funkin.play.character.ScriptedCharacter.ScriptedAnimateAtlasCharacter;
@@ -9,7 +11,6 @@ import funkin.modding.events.ScriptEvent.UpdateScriptEvent;
 import funkin.modding.module.ModuleHandler;
 import funkin.ui.options.PreferencesMenu;
 import funkin.ui.options.OptionsState;
-import funkin.ui.options.OptionsState.PageName;
 import funkin.modding.events.ScriptEvent.StateChangeScriptEvent;
 import funkin.modding.module.Module;
 
@@ -35,7 +36,7 @@ class ExampleModule extends Module // ScriptedModule
       // Inject options to the options menu
       prefs.createPrefItemCheckbox("test option", "", (v) -> {
         // Obtaining "remote" module in ./misc/RemoteModule.hx
-        var funnyModule = ModuleHandler.getModule("remote");
+        var funnyModule = cast(ModuleHandler.getModule("remote"), ScriptedModule);
 
         // calling custom function from "remote"
         funnyModule.scriptCall("remoteCall", ["classic"]);
@@ -52,12 +53,6 @@ class ExampleModule extends Module // ScriptedModule
   //* this method runs on every update in EVERY STATE
   override function onUpdate(event:UpdateScriptEvent)
   {
-    if (FlxG.keys.justPressed.F1)
-    {
-      // If you press F1, we bring you to test subState
-      var subState = ScriptedMusicBeatSubState.init("ExampleSubState");
-      FlxG.state.openSubState(subState);
-    }
     super.onUpdate(event);
   }
 }

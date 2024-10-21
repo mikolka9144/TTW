@@ -41,9 +41,9 @@ class Constants
    * A suffix to add to the game version.
    * Add a suffix to prototype builds and remove it for releases.
    */
-  public static var VERSION_SUFFIX:String = #if (DEBUG || FORCE_DEBUG_VERSION) ' PROTOTYPE' #else '' #end;
+  public static var VERSION_SUFFIX:String = #if FEATURE_DEBUG_FUNCTIONS ' PROTOTYPE' #else '' #end;
 
-  #if (debug || FORCE_DEBUG_VERSION)
+  #if FEATURE_DEBUG_FUNCTIONS
   public static function get_VERSION():String
   {
     return 'v${Application.current.meta.get('version')} (${GIT_BRANCH} : ${GIT_HASH}${GIT_HAS_LOCAL_CHANGES ? ' : MODIFIED' : ''})' + VERSION_SUFFIX;
@@ -63,7 +63,7 @@ class Constants
   /**
    * Link to buy merch for the game.
    */
-  public static var URL_MERCH:String = 'https://needlejuicerecords.com/pages/friday-night-funkin';
+  public static var URL_MERCH:String = 'https://www.makeship.com/shop/creator/friday-night-funkin';
 
   /**
    * Preloader sitelock.
@@ -78,7 +78,12 @@ class Constants
   /**
    * Link to download the game on Itch.io.
    */
-  public static var URL_ITCH:String = 'https://ninja-muffin24.itch.io/funkin/purchase';
+  public static var URL_ITCH:String = 'https://ninja-muffin24.itch.io/funkin';
+
+  /**
+   * Link to play the game on Newgrounds.
+   */
+  public static var URL_NEWGROUNDS:String = 'https://www.newgrounds.com/portal/view/770371';
 
   /**
    * Link to the game's page on Kickstarter.
@@ -187,6 +192,11 @@ class Constants
   public static var DEFAULT_DIFFICULTY_LIST:Array<String> = ['easy', 'normal', 'hard'];
 
   /**
+   * Default list of difficulties for Erect mode.
+   */
+  public static var DEFAULT_DIFFICULTY_LIST_ERECT:Array<String> = ['erect', 'nightmare'];
+
+  /**
    * List of all difficulties used by the base game.
    * Includes Erect and Nightmare.
    */
@@ -259,6 +269,16 @@ class Constants
   public static var DEFAULT_NOTE_STYLE:String = 'funkin';
 
   /**
+   * The default freeplay style for characters.
+   */
+  public static var DEFAULT_FREEPLAY_STYLE:String = 'bf';
+
+  /**
+   * The default pixel note style for songs.
+   */
+  public static var DEFAULT_PIXEL_NOTE_STYLE:String = 'pixel';
+
+  /**
    * The default album for songs in Freeplay.
    */
   public static var DEFAULT_ALBUM_ID:String = 'volume1';
@@ -282,6 +302,21 @@ class Constants
    * Default denominator for the time signature.
    */
   public static var DEFAULT_TIME_SIGNATURE_DEN:Int = 4;
+
+  /**
+   * ANIMATIONS
+   */
+  // ==============================
+
+  /**
+   * A suffix used for animations played when an animation would loop.
+   */
+  public static var ANIMATION_HOLD_SUFFIX:String = '-hold';
+
+  /**
+   * A suffix used for animations played when an animation would end before transitioning to another.
+   */
+  public static var ANIMATION_END_SUFFIX:String = '-end';
 
   /**
    * TIMING
@@ -364,11 +399,7 @@ class Constants
    * 1 = The preloader waits for 1 second before moving to the next step.
    *     The progress bare is automatically rescaled to match.
    */
-  #if debug
-  public static var PRELOADER_MIN_STAGE_TIME:Float = 0.0;
-  #else
   public static var PRELOADER_MIN_STAGE_TIME:Float = 0.1;
-  #end
 
   /**
    * HEALTH VALUES
@@ -460,10 +491,6 @@ class Constants
   public static var JUDGEMENT_BAD_COMBO_BREAK:Bool = true;
   public static var JUDGEMENT_SHIT_COMBO_BREAK:Bool = true;
 
-  // % Sick
-  public static var RANK_PERFECT_PLAT_THRESHOLD:Float = 1.0; // % Sick
-  public static var RANK_PERFECT_GOLD_THRESHOLD:Float = 0.85; // % Sick
-
   // % Hit
   public static var RANK_PERFECT_THRESHOLD:Float = 1.00;
   public static var RANK_EXCELLENT_THRESHOLD:Float = 0.90;
@@ -508,12 +535,16 @@ class Constants
    * OTHER
    */
   // ==============================
+  #if FEATURE_GHOST_TAPPING
+  // Hey there, Eric here.
+  // This feature is currently still in development. You can test it out by creating a special debug build!
+  // lime build windows -DFEATURE_GHOST_TAPPING
 
   /**
-   * If true, the player will not receive the ghost miss penalty if there are no notes within the hit window.
-   * This is the thing people have been begging for forever lolol.
+   * Duration, in seconds, after the player's section ends before the player can spam without penalty.
    */
-  public static var GHOST_TAPPING:Bool = false;
+  public static var GHOST_TAP_DELAY:Float = 3 / 8;
+  #end
 
   /**
    * The maximum number of previous file paths for the Chart Editor to remember.
